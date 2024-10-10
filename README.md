@@ -7,3 +7,9 @@
 新建 main.py文件
 
 终端启动服务 uvicorn main:app --reload
+
+
+pip install pandas
+
+pip install openpyxl
+
