@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import pandas as pd
 import json
+import uvicorn
 import random
 from pydantic import BaseModel
 app = FastAPI()
@@ -43,3 +44,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+if __name__ == "__main__":
+    uvicorn.run(app="main:app", host="0.0.0.0", port=8000, reload=False)
